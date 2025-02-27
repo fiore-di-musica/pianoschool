@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiore di Musica</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header__container">
+            <h1 class="header__logo"><a href="/">Fiore di Musica</a></h1>
+            <button type="button" class="hamburger">
+                <span></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="/">ホーム</a></li>
+                    <li class="nav__item"><a href="/about">教室概要・規約</a></li>
+                    <li class="nav__item"><a href="/price">料金</a></li>
+                    <li class="nav__item"><a href="/profile">講師プロフィール</a></li>
+                    <li class="nav__item"><a href="/teacher">家庭教師</a></li>
+                    <li class="nav__item"><a href="/contact">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <script src="js/script.js"></script>
+    <script src="js/add_note.js"></script>
+
+    <div class="main-container">
+        <h1 class="title_logo">
+            <span style="font-size: 2.5rem;">ピアノアカデミー<br></span>
+            <span>
+                Fiore di Musica
+            </span>
+        </h1>
+
+        <div class="description">
+            神奈川県川崎市・大和市・横浜市、<br>東京都世田谷区・杉並区・渋谷区・中野区・目黒区周辺で<br>ピアノ教室をお探しの方はこちらへ
+        </div>
+
+        <div class="piano" id="piano">
+            <div class="key do"></div>
+            <div class="black-key" id="black-key-1"></div>
+            <div class="key re"></div>
+            <div class="black-key" id="black-key-2"></div>
+            <div class="key mi"></div>
+            <div class="key fa"></div>
+            <div class="black-key" id="black-key-3"></div>
+            <div class="key sol"></div>
+            <div class="black-key" id="black-key-4"></div>
+            <div class="key la"></div>
+            <div class="black-key" id="black-key-5"></div>
+            <div class="key si"></div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const keys = document.querySelectorAll('.piano .key, .piano .black-key');
+                    keys.forEach(key => {
+                        key.style.animationDelay = (Math.random() * 2) + 's';
+                    });
+                });
+            </script>
+        </div>
+
+        <section class="about-section">
+            <h2>講師よりメッセージ</h2>
+            <div class="about-content">
+                <div class="about-text">
+
+                    <p>はじめまして。ピアノ講師の久保川悠です。ホームページをご覧いただき、ありがとうございます。</p>
+                    <p> 音楽を奏でることは、人生に多くの価値をもたらします。</p>
+                    <p>音楽を通じて感性を育み、自分自身と向き合う時間を持つことで、日々の生活に新たな彩りが加わります。当教室の名前であるFiore di Musica（フィオーレ・ディ・ムジカ） は
+                        「音楽の花」という意味をもち、〝花のようにカラフルで表情豊かな音楽を〟という想いが込められています。</p>
+                    <p>練習を重ねる中で「努力すること」「継続すること」の大切さを学び、小さな積み重ねが大きな成長につながる経験も得られます。</p>
+                    <p>言葉では伝えきれない思いを表現できるのも、大きな魅力の一つです。</p>
+                    <p>また、音楽は時に心の拠り所となり、人生のさまざまな場面で支えとなることもあります。</p>
+                    <p>ピアノは年齢を問わず楽しめる楽器で、電子ピアノやキーボードでも気軽に始められます。レッスンでは、一人ひとりの個性やペースに寄り添い、それぞれの目標に合わせた指導を心がけています。「楽しく続けられること」「自分らしい表現を見つけること」を大切にしながら、豊かな時間を一緒に作っていけたらと思います。
+                    </p>
+                    <p>音楽を楽しみながら、一緒にピアノを学んでいきましょう！</p>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Fiore di Musica. All rights reserved.</p>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="/">ホーム</a></li>
+                    <li><a href="/about">教室概要・規約</a></li>
+                    <li><a href="/price">料金</a></li>
+                    <li><a href="/profile">講師プロフィール</a></li>
+                    <li><a href="/teacher">家庭教師</a></li>
+                    <li><a href="/contact">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+
+</html>

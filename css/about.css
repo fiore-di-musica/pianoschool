@@ -1,0 +1,480 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+
+body {
+    margin: 0;
+    /* overflow: hidden; */
+    position: relative;
+    height: 100vh;
+    background-color: #ffffe4;
+}
+
+.content-container {
+    max-width: 1000px;
+    margin: 120px auto 50px;
+    padding: 0 20px;
+}
+
+.page-title {
+    font-family: "Rampart One", sans-serif;
+    color: #333;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* about-section スタイル */
+.about-section {
+    /* margin: 500px auto 50px; */
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    max-width: 1000px;
+    /* position: absolute; */
+}
+
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+    line-height: 1.7;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+}
+
+/* 特別な強調スタイル */
+/* .about-text p:nth-child(4) {
+    border-left: 4px solid #74aac3;
+    padding-left: 15px;
+    font-weight: bold;
+} */
+
+
+.piano {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    width: 100%;
+    height: 60vh;
+    z-index: 1;
+    margin-top: 0;
+    /* 元々のmargin-topを削除 */
+}
+
+
+.key {
+    flex: 0.4;
+    height: 50%;
+    background-color: #ffffe4;
+    border-radius: 0 0 20px 20px;
+    margin: 0;
+    animation: moveUpDown 2s infinite ease-in-out alternate;
+    position: relative;
+}
+
+/* 黒鍵の下に線を追加 */
+.black-key::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 60%;
+    background: #ccc;
+    left: 50%;
+    bottom: -60%;
+    z-index: 1;
+}
+
+/* ミとファの間に線を追加 */
+.key.mi::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 120%;
+    background: #ccc;
+    right: 0;
+    top: 0;
+}
+
+.black-key {
+    flex: 0.9;
+    height: 40%;
+    margin: 0;
+    border-radius: 12px;
+    position: relative;
+    top: -20px;
+    z-index: 2;
+    animation: moveUpDown 3s infinite ease-in-out alternate;
+}
+
+#black-key-1 {
+    background: rgb(232, 255, 177);
+}
+
+#black-key-2 {
+    background: rgb(255, 184, 184);
+}
+
+#black-key-3 {
+    background: rgb(182, 255, 239);
+}
+
+#black-key-4 {
+    background: rgb(208, 182, 255);
+}
+
+#black-key-5 {
+    background: rgb(182, 255, 192);
+}
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(60px);
+    }
+}
+
+h1.title_logo {
+    font-family: "Rampart One", sans-serif;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    top: 17%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 0;
+    z-index: 2;
+    /* ピアノより上に表示 */
+}
+
+/* ヘッダースタイル */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #0077cc;
+}
+
+/* ヘッダースタイル */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    background-color: #74aac3;
+    box-sizing: border-box;
+}
+
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #0077cc;
+}
+
+.header__container {
+    /* max-width: 1000px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: inherit;
+    color: #fff;
+    width: 100%;
+    margin: 0 auto; /* 中央揃えにする */
+    padding: 0 20px; /* 左右のパディングを追加 */
+    box-sizing: border-box;
+}
+
+.header__logo a {
+    
+    text-decoration: none;
+    font-size: 20px;
+    /* text-transform: uppercase; */
+    color: #fff;
+    font-weight: bold;
+    font-family: "Rampart One", sans-serif;
+
+}
+
+
+/* ===============================================
+  ハンバーガーボタンのスタイリング
+  =============================================== */
+.hamburger {
+    width: 50px;
+    height: 80px;
+    position: relative;
+    appearance: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background-color: #74aac3;
+    cursor: pointer;
+    z-index: 300;
+}
+
+.hamburger span,
+.hamburger span::after,
+.hamburger span::before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.5s;
+}
+
+.hamburger span::before {
+    top: -10px;
+}
+
+.hamburger span::after {
+    bottom: -10px;
+}
+
+.hamburger.open span {
+    background-color: transparent;
+}
+
+.hamburger.open span::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.hamburger.open span::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+
+/* ===============================================
+  メニューのスタイリング
+  =============================================== */
+.nav {
+    position: fixed;
+    width: 80%;
+    height: 100vh;
+    top: 80px;
+    right: -120%;
+    background-color: #74aac3;
+    padding: 50px 0;
+    transition: all 0.5s;
+}
+
+.nav__item a {
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    padding: 20px 0 20px 50px;
+    text-transform: uppercase;
+}
+
+.nav__item a:hover {
+    color: #0f5474;
+    background-color: #fff;
+}
+
+.nav.open {
+    right: 0;
+}
+
+img.note {
+    width: 50px;
+    position: absolute;
+    z-index: 3; /* ピアノよりも上に表示 */
+    opacity: 0.8; /* 少し透明に */
+    animation: float 3s infinite ease-in-out alternate; /* ふわふわ動く */
+}
+
+/* 複数の音符を追加する場合用のクラス */
+.note-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none; /* クリック操作を通過させる */
+    z-index: inherit; /* ピアノよりも上に表示 */
+}
+
+/* ふわふわ浮かぶアニメーション */
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-20px) rotate(10deg);
+    }
+}
+
+.description{
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 0.9rem;
+    color: #333;
+    z-index: 2;
+}
+
+.about-section, .policy-section {
+    margin-bottom: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    min-width: 250px;
+}
+
+.floating-note {
+    width: 80px;
+    animation: float 3s infinite ease-in-out alternate;
+}
+
+.policy-card {
+    background-color: #f8f8f0;
+    border-left: 5px solid #74aac3;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* フッター */
+footer {
+    /* position: absolute; を削除 */
+    width: 100%;
+    /* bottom: 0px; を削除 */
+    background-color: #74aac3;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto; /* これを残して下部固定 */
+}
+
+.footer-container {
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-nav li {
+    margin: 0 15px;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+    color: #0f5474;
+}
